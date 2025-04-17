@@ -9,8 +9,6 @@ const intialState = {
     }]
 }
 
-// const todoS
-
 export const todoSlice = createSlice({
     name:  "todos",
     initialState: intialState,
@@ -18,7 +16,7 @@ export const todoSlice = createSlice({
         addTodo: (state, action) => {
             const newTodo = {
                 id: nanoid(),
-                text: action.payload.text,
+                text: action.payload,
                 completed: false,
             }
             state.todos.push(newTodo);
